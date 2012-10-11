@@ -2,6 +2,7 @@ require "Rdc"
 require "test/unit"
 class TestRdc < Test::Unit::TestCase
 	def test_simple
-		assert_equal(2, Rdc.new(3).calculo(3.14))
+		# (2.1/6.28) el radio tendra que resultar el perimetro (2.1) divido entre 2PI (6.28)
+		assert_in_delta((2.1/6.28), Rdc.new.calculo(2.1), 0 )
 	end
 end

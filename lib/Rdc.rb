@@ -7,7 +7,7 @@ class Rdc
 	def calculo(p)
 		@per = p
 		@pi = 2 * @pi
-		@per / @pi
+		@per / @pi   #Devolvemos el valor del radio
 	end
 end
 

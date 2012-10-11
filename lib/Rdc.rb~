@@ -5,15 +5,15 @@ class Rdc
 		@pi = 3.14
 	end
 	def calculo(p)
-		@per = p
-		if @per.class == String
-			raise 'El argumento no puede ser un String!!!'
+		@per = p.to_f
+		if @per.class != Float
+			raise ' El argumento tiene que ser un numero!!!'
 		else
 			if (@per > 0.0)
 				@pi = 2 * @pi
 				@per / @pi   #Devolvemos el valor del radio
 			else
-				raise 'El argumento no puede ser numero positivo!!!'
+				raise ' El argumento no puede ser un numero negativo!!!'
 			end
 		end
 	end

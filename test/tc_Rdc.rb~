@@ -2,11 +2,11 @@ require "Rdc"
 require "test/unit"
 class TestRdc < Test::Unit::TestCase
 	def test_simple
-		assert_in_delta(5, Rdc.new.calculo(31.4), 0, "Fallo al calcular radio" )
+		assert_in_delta(5, Rdc.new.calculo(31), 0, "Fallo al calcular radio" )
 	end
 	def test_error_letras
-		if (assert_nothing_raised(RuntimeError){Rdc.new.calculo(~)})
-			puts "\n ArgumentError!! Hubo un error al pasar una cadena"
+		if (assert_nothing_raised(RuntimeError){Rdc.new.calculo('a')})
+			puts "\n ArgumentError!! Hubo un error al pasar un String"
 		end
 	end 
 	def test_numero_negativo

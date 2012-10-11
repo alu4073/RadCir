@@ -4,7 +4,7 @@ class Rdc
 		puts "El perimetro es #{@per}" 
 	end
 	def calculo(pi)
-		@pi = pi * pi
+		@pi = 2 * pi
 		puts "El radio es #{@per / @pi} "
 	end
 end

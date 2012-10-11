@@ -1,7 +1,7 @@
 class Rdc
 	def initialize(p)
 		@per = p
-		puts "El perimetro es" @per
+		puts "El perimetro es #{@per}" 
 	end
 	def calculo(pi)
 		@pi = pi * pi

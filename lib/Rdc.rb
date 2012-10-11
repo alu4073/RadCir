@@ -6,8 +6,16 @@ class Rdc
 	end
 	def calculo(p)
 		@per = p
-		@pi = 2 * @pi
-		@per / @pi   #Devolvemos el valor del radio
+		if @per.class == String
+			raise ' El argumento no puede ser un String!!!'
+		else
+			if (@per > 0.0)
+				@pi = 2 * @pi
+				@per / @pi   #Devolvemos el valor del radio
+			else
+				raise ' El argumento no puede ser numero positivo!!!'
+			end
+		end
 	end
 end
 
@@ -17,9 +25,9 @@ if ARGV.size == 1
 	# Si le paso algo que no sea un numero al convertirlo a float resulta 0.0
 	# Como ese no es un valor valido de perimetro controlo que el perimetro sea > 0.0
 	if (@arg <= 0.0)
-		puts " *ERROR* Ha introducido un argumento para el perimetro no valido"
+		puts "\n *ERROR* Ha introducido un argumento para el perimetro no valido"
 	else
-		puts " -El radio para una circunferencia con perimetro #{@arg} es #{Rdc.new.calculo(@arg)}"
+		puts "\n -El radio para una circunferencia con perimetro #{@arg} es #{Rdc.new.calculo(@arg)}"
 	end
 end
 

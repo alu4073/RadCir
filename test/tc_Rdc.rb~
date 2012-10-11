@@ -2,7 +2,20 @@ require "Rdc"
 require "test/unit"
 class TestRdc < Test::Unit::TestCase
 	def test_simple
-		# (2.1/6.28) el radio tendra que resultar el perimetro (2.1) divido entre 2PI (6.28)
-		assert_in_delta((2.1/6.28), Rdc.new.calculo(2.51), 0, "Fallo al calcular radio" )
+		assert_in_delta(5, Rdc.new.calculo(31.4), 0, "Fallo al calcular radio" )
 	end
+	def test_error_letras
+		if (assert_nothing_raised(RuntimeError){Rdc.new.calculo(~)})
+			puts "\n ArgumentError!! Hubo un error al pasar una cadena"
+		end
+	end 
+	def test_numero_negativo
+
+		if (assert_nothing_raised(RuntimeError){Rdc.new.calculo(-31.4)})
+
+		#assert_nil( Rdc.new.calculo(-31.4),  "Resultado no fue nil" ) == nil
+			puts "\n Hubo un error al pasar un numero negativo"
+		end
+	end
+
 end

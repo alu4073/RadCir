@@ -2,7 +2,17 @@ task :default => :Rdc
 
 desc "Ejecuta Rdc.rb con ruby"
 task :Rdc do
-  sh "ruby lib/Rdc.rb"
+  sh "ruby lib/Rdc.rb 1.8"
+end
+
+desc "Ejecuta Rdc.rb con ruby pasando un numero negativo"
+task :NumNeg do
+  sh "ruby lib/Rdc.rb -1.8"
+end
+
+desc "Ejecuta Rdc.rb con ruby pasando un caracter"
+task :Car do
+  sh "ruby lib/Rdc.rb 'a'"
 end
 
 desc "Ejecuta los Test"

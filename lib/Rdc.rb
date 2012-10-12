@@ -25,9 +25,9 @@ if ARGV.size == 1
 	# Si le paso algo que no sea un numero al convertirlo a float resulta 0.0
 	# Como ese no es un valor valido de perimetro controlo que el perimetro sea > 0.0
 	if (@arg <= 0.0)
-		puts "\n *ERROR* Ha introducido un argumento para el perimetro no valido"
+		puts "\n *ERROR* Ha introducido un argumento para el perimetro no valido "
 	else
-		puts "\n -El radio para una circunferencia con perimetro #{@arg} es #{Rdc.new.calculo(@arg)}"
+		puts "\n -El radio para una circunferencia con perimetro #{@arg} es #{Rdc.new.calculo(@arg)} "
 	end
 end
 

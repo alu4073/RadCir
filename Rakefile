@@ -1,8 +1,18 @@
 task :default => :Rdc
 
-desc "Ejecuta Rdc.rb con ruby"
+desc "Ejecuta Rdc.rb con ruby pasando el parametro 1.8"
 task :Rdc do
   sh "ruby lib/Rdc.rb 1.8"
+end
+
+desc "Ejecuta Rdc.rb con ruby pasando un numero negativo"
+task :NumNeg do
+  sh "ruby lib/Rdc.rb -1.8"
+end
+
+desc "Ejecuta Rdc.rb con ruby pasando un caracter"
+task :Car do
+  sh "ruby lib/Rdc.rb 'a'"
 end
 
 desc "Ejecuta los Test"
